@@ -1,0 +1,11 @@
+<h2>نوبت‌های خالی</h2>
+<ul>
+  {% for slot in slots %}
+    <li>
+      {{ slot.date }} - {{ slot.start_time }} تا {{ slot.end_time }} |
+      <a href="{% url 'book_appointment' slot.id %}">رزرو</a>
+    </li>
+  {% empty %}
+    <li>هیچ نوبت آزادی پیدا نشد.</li>
+  {% endfor %}
+</ul>

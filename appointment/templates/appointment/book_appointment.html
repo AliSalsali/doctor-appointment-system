@@ -1,0 +1,7 @@
+<h2>رزرو نوبت</h2>
+<p>زمان انتخاب‌شده: {{ slot.date }} - {{ slot.start_time }} تا {{ slot.end_time }}</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">تایید رزرو</button>
+</form>
