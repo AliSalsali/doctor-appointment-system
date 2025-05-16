@@ -25,3 +25,6 @@ class PatientSignUpForm(UserCreationForm):
                 national_id=self.cleaned_data.get('national_id')
             )
         return user
+
+
+
